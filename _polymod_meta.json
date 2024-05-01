@@ -1,0 +1,12 @@
+{
+  "title": "Mod Title",
+  "description": "Mod Description",
+  "author": "Mod Author Here",
+  "api_version": "0.1.0",
+  "mod_version": "1.0.0",
+  "license": "CC BY 4.0,MIT",
+
+  "notice_api": "don't change api_version.",
+  "notice_license": "remember to change the license if you wanna license your mod",
+  "notice_license": "under something else while also open-sourcing it"
+}

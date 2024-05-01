@@ -1,0 +1,229 @@
+import funkin.modding.module.Module;
+import Reflect;
+
+/**
+ * [2024/05/01] @crowplexus
+ *
+ * at the current state of V-Slice modding knowledge,
+ * this is the best way to go about making a Module without having to wait for
+ * the hotfix update to come out.
+ *
+ * You can import any class as long as you know what they are and what they do.
+ *
+ * more documentation on the matter will be done later once more stuff gets discovered.
+**/
+class MyCustomModule extends Module {
+  /**
+   * Fired when creating this module
+  **/
+  function new(): Void {
+    // Module Name, Module Priority Value
+    // Modules with higher priority values will attempt to
+    // initialize after every other module
+    super("My Custom Module", 0);
+  }
+
+  /**
+   * Fired under certain event conditions.
+   *
+   * @param event     Script Event Object,
+   *                  if you wanna see what it contains
+   *
+   *                  ```haxe
+   *                  trace(Reflect.fields(event));
+   *                  ```
+   *                  in the function
+  **/
+  override function onScriptEvent(event) {
+    super.onScriptEvent(event);
+  }
+
+  // bwlow are "script conditions", things you can access with this, //
+  // "onScriptEvent" function, neatly contained in their own functions. //
+
+  /**
+   * Function gets fired when the current game state calls `create()`
+  **/
+  override function onCreate(event) {
+    super.onCreate(event);
+  }
+
+  /**
+   * Function gets fired when the current game state calls `destroy()`
+  **/
+  override function onDestroy(event) {
+    super.onDestroy(event);
+  }
+
+  /**
+   * Function gets fired when the current game state calls `update()`
+  **/
+  override function onUpdate(event) {
+    super.onUpdate(event);
+  }
+
+  /**
+   * Function gets fired whenever a state change is request in the game
+  **/
+  override function onStateChangeBegin(event) {
+    super.onStateChangeBegin(event);
+  }
+
+  /**
+   * Function gets fired whenever a state change finishes
+   * that would be, when the state is fully loaded.
+  **/
+  override function onStateChangeEnd(event) {
+    super.onStateChangeEnd(event);
+  }
+
+  /**
+   * Ditto of `onStateChangeBegin`, but for a Substate (e.g: Pause Menu)
+  **/
+  override function onSubStateOpenBegin(event) {
+    super.onSubStateOpenBegin(event);
+  }
+
+  /**
+   * Ditto of `onStateChangeEnd`, but for a Substate (e.g: Pause Menu)
+   * happens when OPENING the Substate
+  **/
+  override function onSubStateOpenEnd(event) {
+    super.onSubStateOpenEnd(event);
+  }
+
+  /**
+   * Ditto of `onStateChangeEnd`, but for a Substate (e.g: Pause Menu)
+   * happens when OPENING the Substate
+  **/
+  override function onSubStateOpenEnd(event) {
+    super.onSubStateOpenEnd(event);
+  }
+
+  /**
+   * Ditto of `onStateChangeBegin`, but for a Substate (e.g: Pause Menu)
+   * happens when CLOSING the Substate
+  **/
+  override function onSubStateCloseBegin(event) {
+    super.onSubStateCloseBegin(event);
+  }
+
+  /**
+   * Ditto of `onStateChangeEnd`, but for a Substate (e.g: Pause Menu)
+   * happens when CLOSING the Substate
+  **/
+  override function onSubStateCloseEnd(event) {
+    super.onSubStateCloseEnd(event);
+  }
+
+  // // // // // // // // // // // // // / // // // //
+  //                PLAY EVENTS                     //
+  // THESE ONLY FIRE IN PLAYSTATE (DURING GAMEPLAY) //
+
+  /**
+   * Function gets fired when you pause the game
+  **/
+  override function onPause(event) {
+    super.onPause(event);
+  }
+
+
+  /**
+   * Function gets fired when you unpause the game
+  **/
+  override function onResume(event) {
+    super.onResume(event);
+  }
+
+  /**
+   * Function gets fired Whenever a note is approaching any of the strumlines
+  **/
+  override function onNoteIncoming(event) {
+    super.onNoteIncoming(event);
+  }
+
+  /**
+   * Function gets fired whenever you hit a note
+  **/
+  override function onNoteHit(event) {
+    super.onNoteHit(event);
+  }
+
+  /**
+   * Function gets fired whenever you miss a note
+  **/
+  override function onNoteMiss(event) {
+    super.onNoteMiss(event);
+  }
+
+  /**
+   * Function gets fired whenever you press keys when there's no notes to hit
+  **/
+  override function onNoteGhostMiss(event) {
+    super.onNoteGhostMiss(event);
+  }
+
+  /**
+   * Function gets fired in every song step
+  **/
+  override function onStepHit(event) {
+    super.onStepHit(event);
+  }
+
+  /**
+   * Function gets fired in every song step
+  **/
+  override function onBeatHit(event) {
+    super.onBeatHit(event);
+  }
+
+  /**
+   * Function gets fired whenever a song event gets fired
+  **/
+  override function onSongEvent(event) {
+    super.onSongEvent(event);
+  }
+
+  /**
+   * Function gets fired whenever the countdown starts
+  **/
+  override function onCountdownStart(event) {
+    super.onCountdownStart(event);
+  }
+
+  /**
+   * Function gets fired whenever the countdown steps forward
+   * "three", "two", "one", "go"
+  **/
+  override function onCountdownStep(event) {
+    super.onCountdownStep(event);
+  }
+
+  /**
+   * Function gets fired whenever the countdown ends
+  **/
+  override function onCountdownEnd(event) {
+    super.onCountdownEnd(event);
+  }
+
+  /**
+   * Function gets fired whenever the song finishes loading
+   * NOTE: this is *most likely* not being fired at all
+   *        making it useless, wow.
+  **/
+  override function onSongLoaded(event) {
+    super.onSongLoaded(event);
+  }
+
+  /**
+   * Function gets fired whenever you retry a song
+   *
+   * "what classifies as retrying"?
+   * Retrying from the Game Over Screen
+   * Restarting the Song
+   * or Pressing F5 to reload scripts.
+  **/
+  override function onSongRetry(event) {
+    super.onSongRetry(event);
+  }
+}
