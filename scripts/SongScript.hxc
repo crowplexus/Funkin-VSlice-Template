@@ -1,0 +1,106 @@
+import funkin.play.song.Song;
+import modding.events.SongTimeScriptEvent;
+import modding.events.ScriptEvent;
+import modding.events.CountdownScriptEvent;
+import modding.events.ScriptEvent;
+import modding.events.NoteScriptEvent;
+
+/**
+ * [2024/05/02] @Nebula_Zorua
+ *
+ * Script that is ran for songs
+ * Contains a bunch of functions related to PlayState
+**/
+
+// hey crow can you document these for me <3
+
+class SongScript extends Song
+{
+    public function new() {
+        super('song_name'); // replace song_name with the song you wanna make the script for. (lit-up if you wanna load a script on lit-up)
+    }
+
+    override function onCountdownStart(event:CountdownScriptEvent):Void
+    {
+        super.onCountdownStart(event);
+    }
+
+    override function onCountdownStep(event: CountdownScriptEvent):Void
+    {
+        super.onCountdownStep(event);
+    }
+
+    override function onCountdownEnd(event: CountdownScriptEvent):Void
+    {
+        super.onCountdownEnd(event);
+    }
+
+    override function onStepHit(event: SongTimeScriptEvent): Void
+    {
+        super.onStepHit(event);
+    }
+
+    override function onBeatHit(event: SongTimeScriptEvent): Void
+    {
+        super.onBeatHit(event);
+    }
+
+    override function onSongStart(event: ScriptEvent): Void
+    {
+        super.onSongStart(event);
+    }
+
+    override function onSongEnd(event: ScriptEvent): Void
+    {
+        super.onSongEnd(event);
+    }
+
+    override function onSongRetry(event: ScriptEvent): Void
+    {
+        super.onSongRetry(event);
+    }
+
+    override function onPause(event: ScriptEvent): Void
+    {
+        super.onPause(event);
+    }
+
+    override function onResume(event: ScriptEvent): Void
+    {
+        super.onResume(event:);
+    }
+
+    override function onNoteIncoming(event: NoteScriptEvent): Void
+    {
+        super.onNoteIncoming(event);
+    }
+
+    override function onNoteHit(event: NoteScriptEvent): Void
+    {
+        super.onNoteHit(event);
+    }
+
+    override function onNoteGhostMiss(event: ScriptEvent): Void
+    {
+        super.onNoteGhostMiss(event);
+    }
+
+    override function onNoteMiss(event: NoteScriptEvent): Void
+    {
+        super.onNoteMiss(event);
+    }
+
+    override function onGameOver(event: ScriptEvent):Void
+    {
+        super.onGameOver(event);
+    }
+
+    /**
+     * Called when you should clean up stuff created in the script. Called when the state is destroyed.
+     * @param event 
+     */
+    override function onDestroy(event: ScriptEvent):Void
+    {
+        super.onDestroy(event);
+    }
+}

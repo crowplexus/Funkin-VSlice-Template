@@ -208,8 +208,7 @@ class MyCustomModule extends Module {
 
   /**
    * Function gets fired whenever the song finishes loading
-   * NOTE: this is *most likely* not being fired at all
-   *        making it useless, wow.
+   * NOTE: this callback does not currently get fired
   **/
   override function onSongLoaded(event) {
     super.onSongLoaded(event);
@@ -221,7 +220,7 @@ class MyCustomModule extends Module {
    * "what classifies as retrying"?
    * Retrying from the Game Over Screen
    * Restarting the Song
-   * or Pressing F5 to reload scripts.
+   * or Pressing F5 to reload scripts. < I'm not sure it does?
   **/
   override function onSongRetry(event) {
     super.onSongRetry(event);
