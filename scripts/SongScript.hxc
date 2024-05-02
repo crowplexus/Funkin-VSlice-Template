@@ -1,8 +1,8 @@
 import funkin.play.song.Song;
 import modding.events.SongTimeScriptEvent;
 import modding.events.ScriptEvent;
+import modding.events.UpdateScriptEvent;
 import modding.events.CountdownScriptEvent;
-import modding.events.ScriptEvent;
 import modding.events.NoteScriptEvent;
 
 /**
@@ -19,6 +19,16 @@ class SongScript extends Song
     public function new() {
         super('song_name'); // replace song_name with the song you wanna make the script for. (lit-up if you wanna load a script on lit-up)
     }
+
+    function onCreate(event:ScriptEvent):Void
+    {
+        super.onCreate(event);
+    }
+
+    function onUpdate(event:UpdateScriptEvent) 
+    {
+		super.onUpdate(event);
+	}
 
     override function onCountdownStart(event:CountdownScriptEvent):Void
     {
